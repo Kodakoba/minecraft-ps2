@@ -12,10 +12,10 @@ SRC = $(wildcard src/**.c)
 
 EE_BIN = blocktest.elf
 EE_OBJS = $(SRC:.c=.o)
-EE_LIBS = -lc -ldebug -lmath3d
+EE_LIBS = -ldraw -lgraph -lmath3d -lpacket -ldma -lc -ldebug
 
 all: $(EE_BIN)
-	$(EE_STRIP) --strip-all $(EE_BIN)
+#	$(EE_STRIP) --strip-all $(EE_BIN)
 
 #main.c:
 #	bin2c res/atlas.raw main.c blocktest
