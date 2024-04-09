@@ -6,12 +6,13 @@
 # Licenced under Academic Free License version 2.0
 # Review ps2sdk README & LICENSE files for further details.
 #
-# SDK and Toolchain used from PS2SDK under AFL 2024
+# SDK and Toolchain used from PS2SDK under AFL accessed 2024
+
+SRC = $(wildcard src/**.c)
 
 EE_BIN = blocktest.elf
-EE_OBJS = main.o
+EE_OBJS = $(SRC:.c=.o)
 EE_LIBS = -lc -ldebug -lmath3d
-
 
 all: $(EE_BIN)
 	$(EE_STRIP) --strip-all $(EE_BIN)
