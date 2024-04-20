@@ -2,8 +2,8 @@
     "configurations": [
         {
             "name": "Linux",
-            "intelliSenseMode": "linux-gcc-x64",
-            "compilerPath": "/usr/local/ps2dev/ee/bin/mips64r5900el-ps2-elf-gcc",
+            "intelliSenseMode": "${default}",
+            "compilerPath": "\\\\wsl.localhost\\Ubuntu/usr/local/ps2dev/ee/bin/mips64r5900el-ps2-elf-gcc",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "compileCommands": "${workspaceFolder}/compile_commands.json",
@@ -14,7 +14,15 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
             },
-            "configurationProvider": "ms-vscode.makefile-tools"
+            "configurationProvider": "ms-vscode.makefile-tools",
+            "includePath": [
+                "\\\\wsl.localhost\\Ubuntu\\usr\\local\\ps2dev\\ee\\include",
+                "\\\\wsl.localhost\\Ubuntu\\usr\\local\\ps2dev\\ps2sdk\\common\\include",
+                "\\\\wsl.localhost\\Ubuntu\\usr\\local\\ps2dev\\gsKit\\include",
+                "\\\\wsl.localhost\\Ubuntu\\usr\\local\\ps2dev\\ps2sdk\\ee\\include",
+                "\\\\wsl.localhost\\Ubuntu\\usr\\local\\ps2dev\\ps2sdk\\iop\\include",
+                "\\\\wsl.localhost\\Ubuntu\\usr\\local\\ps2dev\\ps2sdk\\ports\\include"
+            ]
         }
     ],
     "version": 4
